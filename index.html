@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reviana</title>
+<title>Reviana Fitri</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#FFF0F5; --pink:#FF8FB8; --deep:#E0457B; --ink:#6B3A4F; --soft:#FFD6E4; }
@@ -47,18 +47,17 @@
 </head>
 <body>
   <main class="card">
-    <div class="avatar" id="avatar" role="img" aria-label="Avatar Reviana">🐰</div>
-    <h1>Hi, I'm Reviana!</h1>
+    <div class="avatar" id="avatar" role="img" aria-label="Reviana's avatar">🐰</div>
+    <h1>I'm Reviana Fitri</h1>
     <p class="typing" id="typing"></p>
     <nav class="links">
       <a href="https://github.com/Reviana2">GitHub</a>
     </nav>
-    <p class="hint">click the image. 🌸</p>
+    <p class="hint">Click the bunny 🌸</p>
   </main>
 
 <script>
-  // Teks yang diketik, ganti sesukamu
-  const lines = ["Growing at my own pace. 💻", "Still becoming who I want to be. 🎀", "Trust the proces. ✨"];
+  const lines = ["Information Systems Student", "Growing at my own pace.", "Still becoming who I want to be."];
   const el = document.getElementById('typing');
   let l = 0, c = 0, del = false;
   (function type() {
@@ -70,7 +69,6 @@
     setTimeout(type, del ? 35 : 70);
   })();
 
-  // Kelopak jatuh
   const emojis = ['🌸','💖','🌷','✨'];
   for (let i = 0; i < 14; i++) {
     const p = document.createElement('span');
@@ -82,7 +80,6 @@
     document.body.appendChild(p);
   }
 
-  // Klik avatar
   const av = document.getElementById('avatar');
   const faces = ['🐰','🐱','🐻','🦊','🐼'];
   let f = 0;
