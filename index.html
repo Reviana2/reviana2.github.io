@@ -1,1 +1,96 @@
-<h1>Hallo, ini website Reviana</h1>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviana</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#FFF0F5; --pink:#FF8FB8; --deep:#E0457B; --ink:#6B3A4F; --soft:#FFD6E4; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh; display: grid; place-items: center; text-align: center;
+    background: var(--bg); color: var(--ink); font-family: 'Fredoka', system-ui, sans-serif;
+    overflow: hidden; padding: 24px;
+  }
+  .petal { position: fixed; top: -40px; font-size: 22px; animation: fall linear infinite; pointer-events: none; }
+  @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+
+  .card { position: relative; z-index: 1; }
+  .avatar {
+    width: 150px; height: 150px; margin: 0 auto 20px; border-radius: 50%;
+    background: var(--soft); border: 6px solid var(--pink);
+    display: grid; place-items: center; font-size: 80px;
+    animation: bounce 1.6s ease-in-out infinite; cursor: pointer;
+  }
+  @keyframes bounce { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-16px) } }
+  .avatar.pop { animation: pop .5s; }
+  @keyframes pop { 50% { transform: scale(1.25) rotate(-8deg); } }
+
+  h1 { font-size: clamp(2rem, 7vw, 3.2rem); color: var(--deep); }
+  .typing { min-height: 1.6em; margin: 8px 0 22px; font-size: 1.2rem; }
+  .typing::after { content: '|'; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .links a {
+    background: var(--pink); color: #fff; text-decoration: none; font-weight: 600;
+    padding: 10px 20px; border-radius: 999px; transition: transform .15s, background .15s;
+  }
+  .links a:hover, .links a:focus-visible { background: var(--deep); transform: translateY(-3px) scale(1.05); outline: none; }
+  .hint { margin-top: 18px; font-size: .85rem; opacity: .7; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .petal, .avatar { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="avatar" id="avatar" role="img" aria-label="Avatar Reviana">🐰</div>
+    <h1>Hai, aku Reviana!</h1>
+    <p class="typing" id="typing"></p>
+    <nav class="links">
+      <a href="https://github.com/Reviana2">GitHub</a>
+    </nav>
+    <p class="hint">Klik kelincinya 🌸</p>
+  </main>
+
+<script>
+  // Teks yang diketik, ganti sesukamu
+  const lines = ["Mahasiswa yang lagi belajar web 💻", "Suka warna pink 🎀", "Lagi semangat ngoding! ✨"];
+  const el = document.getElementById('typing');
+  let l = 0, c = 0, del = false;
+  (function type() {
+    const t = lines[l];
+    el.textContent = t.slice(0, c);
+    if (!del && c === t.length) { del = true; return setTimeout(type, 1400); }
+    if (del && c === 0) { del = false; l = (l + 1) % lines.length; }
+    c += del ? -1 : 1;
+    setTimeout(type, del ? 35 : 70);
+  })();
+
+  // Kelopak jatuh
+  const emojis = ['🌸','💖','🌷','✨'];
+  for (let i = 0; i < 14; i++) {
+    const p = document.createElement('span');
+    p.className = 'petal';
+    p.textContent = emojis[i % emojis.length];
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = 6 + Math.random() * 6 + 's';
+    p.style.animationDelay = -Math.random() * 10 + 's';
+    document.body.appendChild(p);
+  }
+
+  // Klik avatar
+  const av = document.getElementById('avatar');
+  const faces = ['🐰','🐱','🐻','🦊','🐼'];
+  let f = 0;
+  av.addEventListener('click', () => {
+    f = (f + 1) % faces.length;
+    av.textContent = faces[f];
+    av.classList.remove('pop'); void av.offsetWidth; av.classList.add('pop');
+  });
+</script>
+</body>
+</html>
