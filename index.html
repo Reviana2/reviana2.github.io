@@ -1,68 +1,13 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Reviana</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-
-    <style>
-        h1 {
-            color: navy;
-        }
-
-        p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: green;
-        }
-
-        #info {
-            color: blueviolet;
-            font-weight: bold;
-        }
-
-        .catatan {
-            font-style: italic;
-            color: brown;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Halo, Web!</h1>
-    <h2>Saya Reviana Fitri</h2>
-
-    <p>Ini adalah contoh dari paragraf. Ini paragraf ke 1</p>
-    <p style="color:brown; font-family:Georgia, 'Times New Roman', Times, serif">Ini adalah contoh dari
-        paragraf ke 2, menggunakan css inline</p>
-    <p>Ini adalah paragraf P3 menggunakan css internal</p>
-
-    <p id="info">Ini adalah komponen html dengan selector single menggunakan id elemen</p>
-
-    <button onclick="alert('Halo, kamu berhasil mengklik catatan!')">Tombol</button>
-
-    <p class="catatan" onclick="alert('Halo, kamu berhasil mengklik catatan!')">Ini adalah komponen html dengan selector group menggunakan class</p>
-    <p class="catatan" onclick="alert('Halo, kamu berhasil mengklik catatan!')">Ini adalah komponen html dengan selector group menggunakan class</p>
-    <p class="catatan" onclick="alert('Halo, kamu berhasil mengklik catatan!')">Ini adalah komponen html dengan selector group menggunakan class</p>
-
+  </head>
+  <body>
+    <h1 style="font-family: 'Dancing script', sans-serif; ">Hello world!</h1>
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-    <script>
-    const tombol = document.querySelector('#btn');
-    const catatan = document.querySelector('.catatan');
-
-    tombol.addEventListener('click', function () {
-        alert('Halo, kamu berhasil mengklik tombol!');
-    });
-
-    catatan.addEventListener('click', function () {
-        alert('Halo, kamu berhasil mengklik catatan!');
-    });
-</script>
-
-    <p>Kunjungi GitHub saya:</p>
-    <a href="https://github.com/Reviana2" target="_blank">GitHub Saya</a>
-</body>
-
+  </body>
 </html>
