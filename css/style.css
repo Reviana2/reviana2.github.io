@@ -1,0 +1,234 @@
+/* =================================
+   REVIA'S PINK WORLD
+   MINECRAFT CHERRY BLOSSOM THEME
+================================= */
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f6;
+    color: #70465b;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #f5c9dc;
+    padding: 18px 0;
+    border-bottom: 4px solid #e6a9c4;
+}
+
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    color: #9b5579 !important;
+}
+
+.nav-link {
+    color: #85516a !important;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #d45d9a !important;
+    transform: translateY(-3px);
+}
+
+/* HOME SECTION */
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(
+            rgba(255, 230, 241, 0.75),
+            rgba(255, 240, 246, 0.9)
+        ),
+        url('https://images.unsplash.com/photo-1490750967868-88aa4486c946');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 8px solid #e9b5cc;
+}
+
+/* PROFILE PHOTO FRAME */
+.profile-frame {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 30px;
+    padding: 8px;
+    background: #f5c9dc;
+    border: 5px solid #ffffff;
+    border-radius: 12px;
+    box-shadow:
+        0 0 0 5px #e6a9c4,
+        0 8px 0 #c77e9e,
+        0 12px 20px rgba(112, 70, 91, 0.2);
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.profile-frame:hover {
+    transform: translateY(-5px) rotate(-2deg);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+}
+
+/* HOME TEXT */
+#home h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    line-height: 1.8;
+    color: #ad6488;
+    margin-bottom: 25px;
+}
+
+#home h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #945371;
+    margin-bottom: 15px;
+}
+
+#home p {
+    color: #875c72;
+    margin-bottom: 25px;
+}
+
+/* PINK BUTTON */
+.btn-pink {
+    background: #e9a9c5;
+    color: white;
+    padding: 14px 25px;
+    border: 3px solid #c77e9e;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0 5px 0 #b66b8c;
+    transition: 0.2s;
+}
+
+.btn-pink:hover {
+    background: #d987ad;
+    color: white;
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #b66b8c;
+}
+
+/* GENERAL SECTIONS */
+section:not(#home) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+section h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    line-height: 2;
+    color: #b56f91;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* SECTION CARDS */
+#about,
+#skills,
+#languages,
+#hobbies {
+    background: #fffafd;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 45px 30px !important;
+    border: 3px solid #f0c3d7;
+    border-radius: 12px;
+    box-shadow: 0 6px 0 #e8c0d2;
+}
+
+/* SKILLS */
+#skills h3 {
+    color: #a65f83;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+/* HOVER EFFECT */
+#about,
+#skills,
+#languages,
+#hobbies {
+    transition: 0.3s ease;
+}
+
+#about:hover,
+#skills:hover,
+#languages:hover,
+#hobbies:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 0 #e8c0d2;
+}
+
+/* FOOTER */
+footer {
+    background: #eab6cd;
+    color: #75485e;
+    padding: 30px 15px;
+    border-top: 5px solid #d99bb8;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    #home h1 {
+        font-size: 17px;
+    }
+
+    #home h2 {
+        font-size: 27px;
+    }
+
+    section h2 {
+        font-size: 13px;
+    }
+
+    .navbar-brand {
+        font-size: 10px;
+    }
+
+    .profile-frame {
+        width: 155px;
+        height: 155px;
+        margin-bottom: 25px;
+    }
+
+    #about,
+    #skills,
+    #languages,
+    #hobbies {
+        padding: 30px 20px !important;
+    }
+}

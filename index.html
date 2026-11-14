@@ -1,41 +1,130 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Reviana</title>
 
-    <style>
-        p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 25px;
-            color: green;
-        }
+    <title>Reviana Fitri | My Little World</title>
 
-        #info {
-            color: blueviolet;
-            font-weight: bold;
-            font-size: 32px;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Minecraft Style Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Halo, Web!</h1>
-    <h2>Saya Reviana Fitri</h2>
 
-    <p>Ini adalah contoh dari paragraf. Ini paragraf ke 1</p>
-    <p style="color:brown; font-size:30px; font-family:Georgia, 'Times New Roman', Times, serif">Ini adalah contoh dari
-        paragraf ke 2, menggunakan css inline</p>
-    <p>Ini adalah paragraf P3 menggunakan css internal</p>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                Revia's World
+            </a>
 
-    <p id="info">Ini adalah komponen html dengan selector single menggunakan id elemen</p>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <p>Kunjungi GitHub saya:</p>
-    <a href="https://github.com/Reviana2" target="_blank">GitHub Saya</a>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#languages">Languages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Hobbies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="container text-center">
+
+        <!-- PROFILE PHOTO -->
+        <div class="profile-frame">
+            <img src="assets/profile.jpeg"
+                 alt="Foto profil Reviana Fitri"
+                 class="profile-photo">
+        </div>
+
+        <h1>WELCOME TO MY WORLD!</h1>
+        <h2>I'm Reviana Fitri</h2>
+        <p>Striving to be the best version of myself.</p>
+
+        <button class="btn btn-pink" onclick="showWelcome()">
+            <i class="bi bi-gem"></i> Explore My World
+        </button>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm Reviana Fitri, an Information Systems student
+            at STMIK Antar Bangsa.
+
+            I enjoy learning new things, exploring creativity,
+            and discovering the digital world.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="container">
+        <h2>My Skills</h2>
+
+        <h3>Programming</h3>
+        <p>Python, Java, HTML, CSS, SQL / MySQL</p>
+
+        <h3>Creative Skills</h3>
+        <p>CapCut, Canva, Alight Motion, Photoshop, CorelDRAW</p>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section id="languages" class="container">
+        <h2>Language Skills</h2>
+        <p>Indonesian - Native</p>
+        <p>English - Basic</p>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="container">
+        <h2>Hobbies & Interests</h2>
+        <p>
+            Gaming, creative editing, exploring new cultures,
+            and learning new things.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <p>Made with love by Reviana Fitri</p>
+        <p>© 2026 My Little World</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+
 </body>
-
 </html>
